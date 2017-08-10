@@ -1,7 +1,8 @@
 body {
   height: 100%;
-  background: url("../images/default.jpg") no-repeat;
+  background: url("../images/default.jpg") no-repeat center center fixed;
   transition: background ease-in-out 1s;
+  background-size: cover;
   color: #fff;
   font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
 }

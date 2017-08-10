@@ -12,6 +12,7 @@ angular.module('weatherForecastApp')
     addressUrl: 'http://maps.googleapis.com/maps/api/geocode/json',
     forecastUrl: 'http://api.openweathermap.org/data/2.5/forecast/daily',
     weatherUrl: 'http://api.openweathermap.org/data/2.5/weather',
+    ultraWeatherUrl: 'https://q9syafn1oh.execute-api.us-east-1.amazonaws.com/beta/conditions',
     openWeatherMapAPIKey: 'a43a8cf92f1e7752811377ddfbb60839',
     codeList: [
       {

@@ -44,8 +44,8 @@ describe('Controller: MainCtrl', function () {
           formatted_address: 'Nashville, TN, USA',
           geometry: {
             location: {
-              lon: '40',
-              lat: '40'
+              lon: '-6.852',
+              lat: '33.97'
             }
           }
         }
@@ -137,7 +137,8 @@ describe('Controller: MainCtrl', function () {
       expect(scope.setBackground).toHaveBeenCalledWith(icon);
     });
 
-    httpBackend.expectGET(CONFIG.weatherUrl + '?APPID=' + CONFIG.openWeatherMapAPIKey + '&action=read&format=.json&lat=' + latitude + '&lon=' + longitude + '&units=imperial').respond(mockWeatherResults);
+    // httpBackend.expectGET(CONFIG.weatherUrl + '?APPID=' + CONFIG.openWeatherMapAPIKey + '&action=read&format=.json&lat=' + latitude + '&lon=' + longitude + '&units=imperial').respond(mockWeatherResults);
+    httpBackend.expectPOST(CONFIG.ultraWeatherUrl + '?long=' + longitude + '&lat=' + latitude).respond(mockWeatherResults);
     httpBackend.expectGET('views/main.html').respond(200);
     httpBackend.flush();
   });

@@ -19,8 +19,9 @@ angular.module('weatherForecastApp')
     };
 
     $scope.callWeather = function (latitude, longitude) {
-      return Weather.query({ lat: latitude, lon: longitude, units: 'imperial' }, function (data) {
+      return Weather.save({ lat: latitude, lon: longitude}, function (data) {
         $scope.weather = data;
+        console.log($scope.weather);
         $scope.setBackground($scope.weather.weather[0].icon);
       });
     };

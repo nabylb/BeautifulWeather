@@ -4,7 +4,17 @@
 
 [Beautiful Weather](http://weather.danielcottone.com/) is a simple, responsively designed weather forecast app developed with AngularJS.
 
-## Build & development
+## Install Bower
+
+Bower is a command line utility. Install it with npm.
+
+Run `npm install -g bower`
+
+Bower requires node, npm and git.## Build & development
+
+## Install Grung
+
+Run `npm install -g grunt-cli`
 
 Run `npm install && bower install && grunt build` for building and `grunt serve` for preview.
 
