@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css?family=Arsenal');
+@import url("./icons.css");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #F2B268;
+    font-family: 'Arsenal', sans-serif;
+}
+
+.app {
+    width: 600px;
+    max-width: 100%;
+    background: #e85643;
+    padding: 3em;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.19);
+}
+
+.logo {
+    text-align: left;
+    float: left;
+    width: 20%;
+    margin-left: -2em;
+    margin-top: -2em;
+}
+
+.location {
+    text-align: left;
+    float: left;;
+    width: 80%;
+    font-size: 1em;
+    margin-top: -2.20em;
+}
+
+.weather-today {
+    height: 450px;
+    margin-top: -5em;
+    position: relative;
+    margin-bottom: -4em;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.overlay {
+    text-align:center;
+    height: 200px;/*height needs to be set*/
+    width: 200px;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.location-description {
+    margin-top: 0em;
+    padding-bottom: 0.5em;
+    font-size: 2em;
+}
+
+.time-description {
+    margin-top: -2em;
+    padding-bottom: -2em;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.condition-description {
+    margin-top: 4em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding-bottom: 1em;
+    font-size: 1em;
+}
+
+.icon-big {
+    margin-top: 0em;
+  }
+
+  #outPopUp {
+    position: relative;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: 0 0 0 0px;
+  }
+
+.big-temp,
+.big-uvi {
+    font-size: 5em;
+    position: absolute;
+    right: 50%;
+    margin-right: -100px;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+.small-temp,
+.small-humidity,
+.small-wind,
+.small-provider {
+  text-align: right;
+  float: right;
+  width: 50%;
+  font-size: 1.2em;
+}
+
+.big-uvi:after {
+    content: "UVI";
+    font-size: 0.5em;
+    opacity: 0.2;
+    font-family: monospace;
+    position: absolute;
+    margin-right: -100px;
+    bottom: 50%;
+    margin-bottom: -1.15em;
+}
+
+.big-temp:after,
+.small-temp:after {
+    content: "°";
+    opacity: 0.2;
+    font-family: monospace;
+    width: 50%;
+    font-size: 1.2em;
+}
+
+.small-humidity:after {
+    content: "%";
+    opacity: 0.2;
+    font-family: monospace;
+    width: 50%;
+    font-size: 1.2em;
+}
+
+.small-wind:after {
+    content: "mph";
+    opacity: 0.2;
+    font-family: monospace;
+    width: 50%;
+    font-size: 1.0em;
+}
+
+.small-provider:after {
+    opacity: 0.2;
+    font-family: monospace;
+    width: 50%;
+    font-size: 1.8em;
+}
+
+.icon-wrapper {
+  margin-bottom: 2em;
+  margin-left: 9em;
+}
+
+.icon-wrapper-small {
+    position: relative;
+    text-align: right;
+    float: right;
+    margin-right: -10px;
+    width: 50%;
+}
+
+.day {
+    margin-top: -7em;
+    clear: both;
+    padding: 0.5em;
+}
+
+.day-description {
+    text-align: left;
+    float: left;
+    width: 50%;
+    top: -10px;
+    font-size: 1em;
+}
+
+.day .icon-wrapper {
+    text-align: right;
+    float: right;
+    width: 50%;
+    top: -10px;
+    font-weight: bold;
+}
+
+.day .icon-wrapper .small-temp:after .small-humidity:after {
+    right: -15px;
+}
+
+.day .icon-wrapper .small-temp .small-humidity {
+    font-size: 2em;
+    margin-right: 1.7em;
+}
+
+.day .icon-wrapper .icon-small {
+    zoom: 0.3;
+}
+
+.btn:hover {
+  background-color: #e53935;
+  border-color: #e53935;
+}
+
+.Demo__github-icon {
+  font-size: 24px;
+}
+
+.Demo__github-link {
+  color: #262626;
+  font-size: 20px;
+}
+
+.Demo__github-link:hover,
+.Demo__github-link:active {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.Demo__suggestion-icon {
+  margin-right: 8px;
+  color: #e85643;
+}
+
+.fa.fa-map-marker.header {
+  color: #F2B268;
+  width: 100%;
+}
+
+.Demo__search-input,
+.Demo__search-input:focus,
+.Demo__search-input:active {
+
+  width: 100%;
+  padding: 6px;
+  font-size: 14px;
+  border-radius: 2px;
+  outline: none;
+  margin-top: -6em;
+  color: #FFF;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #FFF;
+  box-sizing: border-box;
+  text-align: left;
+
+  position: relative;
+  z-index: 1;
+  &:focus {
+    outline: inherit;;
+  }
+}
+
+.Demo__search-input::placeholder { /* IE 10+ */
+  color: #FFF;
+  opacity: 0.2;
+}
+
+.Demo__autocomplete-container {
+  border-bottom: honeydew;
+  border-left: honeydew;
+  border-right: honeydew;
+  border-top: 1px solid #e6e6e6;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border-radius: 0 0 2px 2px;
+  position:fixed;
+  outline: none;
+  width: 50%;
+  z-index: 1000;
+}
+
+.Demo__suggestion-item {
+  padding: 1px;
+  text-align: left;
+  background-color: white;
+  position:relative;
+}
+
+.Demo__spinner {
+  color: white;
+  font-size: 60px;
+  position:relative;
+  display: inline-block;
+}
+
+@media (max-width: 480px) {
+  .Demo__autocomplete-container {
+    width: 60%;
+  }
+
+  .Demo__search-input,
+  .Demo__search-input:focus,
+  .Demo__search-input:active {
+    text-align: center;
+  }
+
+  .location-description {
+      margin-top: -0.5em;
+      padding-bottom: 0em;
+      font-size: 2em;
+  }
+
+  .icon-wrapper {
+    margin-bottom: 0em;
+    margin-left: 2em;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .alert {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    -webkit-animation: fadein .75s;
+    -moz-animation: fadein .75s;
+    -ms-animation: fadein .75s;
+    -o-animation: fadein .75s;
+    animation: fadein .75s;
+  }
+
+  .btn {
+    margin-top: 1.5rem;
+  }
+
+  .form-group {
+    display: inline-block;
+    margin-left: 0rem;
+    margin-right: auto;
+    margin-top: rem;
+    width: 100%;
+  }
+}
+
+.geocoding-results {
+  text-align: left;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-o-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

@@ -1,52 +1,71 @@
 {
-  "name": "beautifulWeather",
-  "version": "0.0.0",
-  "dependencies": {
-    "angular-ui-router": "^0.2.15",
-    "angular-ui-utils": "^0.1.1"
-  },
-  "repository": {},
+  "name": "ultra-weather-app",
+  "description": "Ultra Weather App",
+  "version": "0.0.1",
   "devDependencies": {
-    "coveralls": "^2.11.6",
-    "grunt": "^0.4.5",
-    "grunt-autoprefixer": "^2.0.0",
-    "grunt-concurrent": "^1.0.0",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-concat": "^0.5.0",
-    "grunt-contrib-connect": "^0.9.0",
-    "grunt-contrib-copy": "^0.7.0",
-    "grunt-contrib-cssmin": "^0.12.0",
-    "grunt-contrib-htmlmin": "^0.4.0",
-    "grunt-contrib-imagemin": "^1.0.0",
-    "grunt-contrib-jshint": "^0.11.0",
-    "grunt-contrib-uglify": "^0.7.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-filerev": "^2.1.2",
-    "grunt-google-cdn": "^0.4.3",
-    "grunt-karma": "^2.0.0",
-    "grunt-karma-coveralls": "^2.5.4",
-    "grunt-newer": "^1.1.0",
-    "grunt-ng-annotate": "^0.9.2",
-    "grunt-protractor-runner": "^3.2.0",
-    "grunt-protractor-webdriver": "^0.2.5",
-    "grunt-svgmin": "^2.0.0",
-    "grunt-usemin": "^3.0.0",
-    "grunt-wiredep": "^2.0.0",
-    "jasmine-core": "^2.4.1",
-    "jshint-stylish": "^1.0.0",
-    "karma": "^0.13.22",
-    "karma-coverage": "^0.5.3",
-    "karma-jasmine": "^1.1.0",
-    "karma-phantomjs-launcher": "^1.0.4",
-    "load-grunt-tasks": "^3.1.0",
-    "phantomjs": "^1.9.19",
-    "protractor": "^3.3.0",
-    "time-grunt": "^1.0.0"
+    "react-scripts": "0.8.5"
   },
-  "engines": {
-    "node": ">=0.10.0"
+  "dependencies": {
+    "grid-styled": "^2.0.0-10",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-github-corner": "^0.3.0",
+    "react-overlay-loading": "^1.0.3",
+    "react-places-autocomplete": "^5.4.2"
   },
   "scripts": {
-    "test": "grunt test"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "homepage": "https://weather.liveultrahealthy.com",
+  "author": "Nabyl Bennouri <nabyl@liveultrahealthy.com>",
+  "license": "MIT",
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "dist/",
+    "src/",
+    "scripts/",
+    "resources/",
+    "menu/",
+    "cli.js",
+    "index.js"
+  ],
+  "main": "src/App.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/IonicaBizau/react-weather-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/react-weather-app/issues"
+  },
+  "blah": {
+    "show_installation": true,
+    "is_only_web": false,
+    "ex_img": "https://i.imgur.com/thRBbbW.png",
+    "ex_url": "https://ionicabizau.github.io/react-weather-app",
+    "title": "Weather App",
+    "installation_command": {
+      "language": "sh",
+      "content": [
+        "git clone https://github.com/IonicaBizau/react-weather-app/",
+        "cd react-weather-app",
+        "npm i",
+        "npm start",
+        "",
+        "# To build the app for production, run the following command:",
+        "npm run build"
+      ]
+    },
+    "thanks": {
+      "ul": [
+        "I found about the [wunderground.com](https://www.wunderground.com/) API service from [Kim Sarabia (**@kimsarabia**)](https://github.com/KimSarabia). Thanks! :cake:",
+        "The icons were created by [**@deiu**](https://github.com/deiu/weather-icons). :cake:",
+        "The forecast information is provided by [wunderground.com](https://www.wunderground.com/)."
+      ]
+    }
   }
 }
