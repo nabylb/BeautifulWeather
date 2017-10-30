@@ -202,7 +202,7 @@ class App extends Component {
             }
 //            const query = [crd.latitude, crd.longitude].join(",");
 //            const WUNDERGROUND_URL = `https://api.wunderground.com/api/${WUNDERGROUND_KEY}/conditions/lang:${lang}/q/${query}.json`;
-            const ULTRA_URL = `https://q9syafn1oh.execute-api.us-east-1.amazonaws.com/beta/conditions`
+            const ULTRA_URL = `https://q9syafn1oh.execute-api.us-east-1.amazonaws.com/prod/weather`
             return fetch(ULTRA_URL, {
                 method: 'POST',
                 headers: {
@@ -230,7 +230,7 @@ class App extends Component {
   }
 
   getWeather(lat, long) {
-            const ULTRA_URL = `https://q9syafn1oh.execute-api.us-east-1.amazonaws.com/beta/conditions`
+            const ULTRA_URL = `https://q9syafn1oh.execute-api.us-east-1.amazonaws.com/prod/weather`
             return fetch(ULTRA_URL, {
                 method: 'POST',
                 headers: {

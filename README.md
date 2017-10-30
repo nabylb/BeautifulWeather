@@ -1,11 +1,8 @@
 
 # Weather App
-
- [![Support me on Patreon][badge_patreon]][patreon] [![Buy me a book][badge_amazon]][amazon] [![PayPal][badge_paypal_donate]][paypal-donations] [![Version](https://img.shields.io/npm/v/react-weather-app.svg)](https://www.npmjs.com/package/react-weather-app) [![Downloads](https://img.shields.io/npm/dt/react-weather-app.svg)](https://www.npmjs.com/package/react-weather-app)
-
 > A weather app built with React.
 
-[![react-weather-app](https://i.imgur.com/thRBbbW.png)](https://ionicabizau.github.io/react-weather-app)
+[![react-weather-app](http://weather.liveultrahealthy.com/images/app.png)](http://weather.liveultrahealthy.com)
 
 ## :cloud: Installation
 
