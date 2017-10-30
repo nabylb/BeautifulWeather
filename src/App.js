@@ -251,7 +251,7 @@ class App extends Component {
         })
         .catch((error) => {
           // Handle error here
-          var a =1;
+          weather: undefined;
         });
   }
 
@@ -326,7 +326,7 @@ renderHeader () {
       var weather_name = "N/A";
       var uv = "N/A";
       var local_time = "N/A";
-      if (weather != undefined) {
+      if (weather !== undefined) {
          city = weather.city;
          country_name = weather.country_name;
          condition = weather.condition;
@@ -550,7 +550,7 @@ renderDay (day, index) {
   }
 
 renderGeocodeFailure(err) {
-  loading: false;
+//  loading: false;
   return (
     <div className="alert alert-danger" role="alert">
       <strong>Error!</strong> {err}
