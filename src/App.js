@@ -102,25 +102,25 @@ const ICON_SET = {
     "Funnel Cloud": "cloudy",
     "Unknown Precipitation": "rainy",
     "Unknown": "cloudy",
-    chancesleet: "snowy",
-    chancesnow: "snowy",
-    clear: "sunny",
-    flurries: "snowy",
-    fog: "cloudy",
-    hazy: "cloudy",
-    rain: "rainy",
-    chancerain: "rainy",
-    sleet: "snowy",
-    snow: "snowy",
-    chanceflurries: "snowy",
-    tstorms: "stormy",
-    chancetstorms: "stormy",
-    sunny: "sunny",
-    mostlysunny: "rainbow",
-    partlysunny: "rainbow",
-    partlycloudy: "cloudy",
-    mostlycloudy: "cloudy",
-    cloudy: "cloudy"
+    "chancesleet": "snowy",
+    "chancesnow": "snowy",
+    "clear": "sunny",
+    "flurries": "snowy",
+    "fog": "cloudy",
+    "hazy": "cloudy",
+    "rain": "rainy",
+    "chancerain": "rainy",
+    "sleet": "snowy",
+    "snow": "snowy",
+    "chanceflurries": "snowy",
+    "tstorms": "stormy",
+    "chancetstorms": "stormy",
+    "sunny": "sunny",
+    "mostlysunny": "rainbow",
+    "partlysunny": "rainbow",
+    "partlycloudy": "cloudy",
+    "mostlycloudy": "cloudy",
+    "cloudy": "cloudy"
 };
 
 const SUPPORTED_LANGUAGES = [
@@ -310,7 +310,7 @@ renderHeader () {
               loader="ScaleLoader" // check below for more loaders
               text="Loading... Please wait!"
               active={this.state.loading}
-              backgroundColor={'red'} // default is black
+              backgroundColor={'black'} // default is black
               opacity=".4" // default is .9
               > </OverlayLoader>
           </div>
@@ -372,12 +372,12 @@ renderHeader () {
               <Box px={1} py={1} width={1}>
                 <p className="time-description">{local_time}</p>
               </Box>
-              <Box p={1} width={1/2}>
-                <div className="icon-wrapper">
+              <Box p={2} width={1/2}>
+                
                    <div className={`icon-big ${icon}`} >
                    </div>
                    {uviElm}
-                 </div>
+                 
               </Box>
               <Box p={1} width={1/2}>
                 {uviElm}
